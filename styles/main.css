@@ -1,0 +1,25 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 60vw;
+    margin: 100px auto;
+}
+
+.riga {
+    margin-top: 2rem;
+}
+
+*+* {
+    margin-top: .8rem;
+}
+
+.border {
+    border: 1px solid black;
+    padding: 1rem;
+}
