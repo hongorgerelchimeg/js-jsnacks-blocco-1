@@ -247,22 +247,51 @@ console.log(`media: ${media}`);
 //     console.log(numero);
 // }
 
-//Snack 2.3 
+// // Snack 2.3.1
+// // Modo Semplice
+// // In questo modo nella lista c'è probabilità che due variabili sono uguali
+
+// const arrName = ['Bruce', 'Tom' , 'Metal'];
+// const arrSurname = ['Hardy', 'Rock' , 'Lee'];
+// const arrNameSurname = [];
+
+// let listCount = 1;
+// let RandomNameSurname;
+// while (listCount <= 3) {
+//     let counterName = randomNum(0, 3);
+//     let counterSurname = randomNum(0, 3);
+//     console.log(counterName);
+//     console.log(counterSurname);
+//     RandomNameSurname = arrName[counterName] + " " + arrSurname[counterSurname];
+//     arrNameSurname.push(RandomNameSurname);
+//     listCount++;
+// }
+
+// console.log(`Random Generated List: ${arrNameSurname}`);
+
+// function randomNum(min, max) {
+//     return Math.floor(Math.random() * (max - min) ) + min;
+//   }
+
+
+// // Snack 2.3.2
+// // In questo modo nella lista non c'è probabilità che due variabili sono uguali.
 
 const arrName = ['Bruce', 'Tom' , 'Metal'];
 const arrSurname = ['Hardy', 'Rock' , 'Lee'];
 const arrNameSurname = [];
 
-let listCount = 1;
 let RandomNameSurname;
-while (listCount <= 3) {
+
+while (arrNameSurname.length < 3) {
     let counterName = randomNum(0, 3);
     let counterSurname = randomNum(0, 3);
     console.log(counterName);
     console.log(counterSurname);
     RandomNameSurname = arrName[counterName] + " " + arrSurname[counterSurname];
+    if (!arrNameSurname.includes(RandomNameSurname)) {
     arrNameSurname.push(RandomNameSurname);
-    listCount++;
+}
 }
 
 console.log(`Random Generated List: ${arrNameSurname}`);
@@ -270,3 +299,4 @@ console.log(`Random Generated List: ${arrNameSurname}`);
 function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
   }
+
